@@ -1,0 +1,15 @@
+<h1>New stock</h1>
+
+<%= flash[:notice] %>
+
+<div>
+<h3>Import a CSV File</h3>
+  <%= form_tag import_stocks_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+  <% end %>
+</div>
+
+<%#= render 'form' %>
+
+<%= link_to 'Back', stocks_path %>

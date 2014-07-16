@@ -1,0 +1,26 @@
+<%= flash[:notice] %>
+
+<h1 style="text-align: center">Login</h1>
+
+<%= form_for :admin_login, url: homes_login_attempt_path do |f| %>
+
+<p style="text-align: center">
+<%= f.label :username %> <br>
+<%= f.text_field :username %>
+</p>
+
+<p style="text-align: center">
+<%= f.label :password %> <br>
+<%= f.password_field :password %>
+</p>
+
+<p style="text-align: center">
+  <%= f.submit "Sign in" %>
+</p>
+
+<% end %>
+
+<div style="text-align: center">
+<%= link_to 'Sign up', "admins/new" %>
+<%= link_to 'User', "" %>
+</div>

@@ -1,0 +1,113 @@
+<%= form_for(@stock) do |f| %>
+  <% if @stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@stock.errors.count, "error") %> prohibited this stock from being saved:</h2>
+
+      <ul>
+      <% @stock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :parent_id %><br>
+    <%= f.number_field :parent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_area :name %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_text %><br>
+    <%= f.text_area :additional_text %>
+  </div>
+  <div class="field">
+    <%= f.label :normal_price %><br>
+    <%= f.text_field :normal_price %>
+  </div>
+  <div class="field">
+    <%= f.label :store_name %><br>
+    <%= f.text_field :store_name %>
+  </div>
+  <div class="field">
+    <%= f.label :product_group_id %><br>
+    <%= f.number_field :product_group_id %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :brand_id %><br>
+    <%= f.number_field :brand_id %>
+  </div>
+  <div class="field">
+    <%= f.label :packaging %><br>
+    <%= f.text_field :packaging %>
+  </div>
+  <div class="field">
+    <%= f.label :units_of_item %><br>
+    <%= f.number_field :units_of_item %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :halal_status %><br>
+    <%= f.text_field :halal_status %>
+  </div>
+  <div class="field">
+    <%= f.label :halal_certification_issuer %><br>
+    <%= f.text_field :halal_certification_issuer %>
+  </div>
+  <div class="field">
+    <%= f.label :preservatives_status %><br>
+    <%= f.text_field :preservatives_status %>
+  </div>
+  <div class="field">
+    <%= f.label :artificial_coloring_status %><br>
+    <%= f.text_field :artificial_coloring_status %>
+  </div>
+  <div class="field">
+    <%= f.label :artificial_flavoring_status %><br>
+    <%= f.text_field :artificial_flavoring_status %>
+  </div>
+  <div class="field">
+    <%= f.label :food_conditioner_status %><br>
+    <%= f.text_field :food_conditioner_status %>
+  </div>
+  <div class="field">
+    <%= f.label :artifical_sweetener_status %><br>
+    <%= f.text_field :artifical_sweetener_status %>
+  </div>
+  <div class="field">
+    <%= f.label :returnable %><br>
+    <%= f.check_box :returnable %>
+  </div>
+  <div class="field">
+    <%= f.label :product_note %><br>
+    <%= f.text_field :product_note %>
+  </div>
+  <div class="field">
+    <%= f.label :internal_note %><br>
+    <%= f.text_field :internal_note %>
+  </div>
+  <div class="field">
+    <%= f.label :product_price_group %><br>
+    <%= f.text_field :product_price_group %>
+  </div>
+  <div class="field">
+    <%= f.label :creator %><br>
+    <%= f.text_field :creator %>
+  </div>
+  <div class="field">
+    <%= f.label :picture %><br>
+    <%= f.text_field :picture %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

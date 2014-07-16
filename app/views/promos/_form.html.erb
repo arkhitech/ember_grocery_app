@@ -1,0 +1,29 @@
+<%= form_for(@promo) do |f| %>
+  <% if @promo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@promo.errors.count, "error") %> prohibited this promo from being saved:</h2>
+
+      <ul>
+      <% @promo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :promo_type %><br>
+    <%= f.text_area :promo_type %>
+  </div>
+  <div class="field">
+    <%= f.label :end_date %><br>
+    <%= f.datetime_select :end_date %>
+  </div>
+  <div class="field">
+    <%= f.label :stock_id %><br>
+    <%= f.number_field :stock_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

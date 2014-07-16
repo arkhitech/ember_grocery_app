@@ -1,0 +1,53 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  parent_id: 1
+  name: MyText
+  additional_text: MyText
+  normal_price: 9.99
+  store_name: MyString
+  product_group_id: 1
+  status: MyString
+  brand_id: 1
+  packaging: MyString
+  units_of_item: 1
+  size: MyString
+  halal_status: MyString
+  halal_certification_issuer: MyString
+  preservatives_status: MyString
+  artificial_coloring_status: MyString
+  artificial_flavoring_status: MyString
+  food_conditioner_status: MyString
+  artifical_sweetener_status: MyString
+  returnable: false
+  product_note: MyString
+  internal_note: MyString
+  product_price_group: MyString
+  creator: MyString
+  picture: MyString
+
+two:
+  parent_id: 1
+  name: MyText
+  additional_text: MyText
+  normal_price: 9.99
+  store_name: MyString
+  product_group_id: 1
+  status: MyString
+  brand_id: 1
+  packaging: MyString
+  units_of_item: 1
+  size: MyString
+  halal_status: MyString
+  halal_certification_issuer: MyString
+  preservatives_status: MyString
+  artificial_coloring_status: MyString
+  artificial_flavoring_status: MyString
+  food_conditioner_status: MyString
+  artifical_sweetener_status: MyString
+  returnable: false
+  product_note: MyString
+  internal_note: MyString
+  product_price_group: MyString
+  creator: MyString
+  picture: MyString
