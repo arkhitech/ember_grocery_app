@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-App.Stock = DS.Store.extend({
+App.Stock = DS.Stock.extend({
 
 });
 

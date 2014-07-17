@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20140715035840) do
     t.integer  "parent_id"
     t.text     "name"
     t.text     "additional_text"
-    t.decimal  "normal_price"
+    t.decimal  "normal_price",                precision: 10, scale: 0
     t.string   "store_name"
     t.integer  "product_group_id"
     t.string   "status"
