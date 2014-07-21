@@ -36,7 +36,7 @@ gem 'spring',        group: :development
 
 
 
-gem 'ember-rails'
+gem 'ember-rails', git: 'git://github.com/emberjs/ember-rails.git'
 gem 'ember-source'
 gem 'emblem-rails'
 

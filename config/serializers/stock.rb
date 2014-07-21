@@ -3,5 +3,6 @@
 # and open the template in the editor.
 
 class StockSerializer < ActiveModel::Serializer
-  attributes :parent_id, :name, :additional_text, :normal_price, :store_name
+  attributes :id, :parent_id, :name, :additional_text, :store_name
 end
+

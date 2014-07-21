@@ -1,7 +1,21 @@
 <%= link_to 'New Stock', new_stock_path %>
 
-<h1>Listing stocks</h1>
 
+<script type="text/x-handlebars">
+
+<h1> Welcome </h1>
+{{#linkTo 'posts'}}Posts{{/linkTo}}  
+{{#linkTo 'about'}}About{{/linkTo}}
+{{#linkTo 'stocks'}}View stocks{{/linkTo}}
+  
+      {{outlet}}
+  
+
+</script>
+
+
+<!--
+  <h1>Listing stocks</h1>
 <table>
   <thead>
     <tr>
@@ -69,3 +83,4 @@
 </table>
 
 <br>
+-->

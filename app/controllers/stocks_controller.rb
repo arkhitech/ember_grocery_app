@@ -1,15 +1,25 @@
 class StocksController < ApplicationController
   before_action :set_stock, only: [:show, :edit, :update, :destroy]
 
+  #respond_to :json, :html
   # GET /stocks
   # GET /stocks.json
+  
   def index
     @stocks = Stock.all
+    respond_to do |format|
+      format.html {@stocks}
+      format.json {render json: @stocks.as_json}
+    end
   end
 
   # GET /stocks/1
   # GET /stocks/1.json
   def show
+    respond_to do |format|
+      format.html {@stock}
+      format.json {render json: @stock.as_json}
+    end
   end
 
   # GET /stocks/new
@@ -71,13 +81,13 @@ class StocksController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_stock
-      @stock = Stock.find(params[:id])
-    end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def stock_params
-      params.require(:stock).permit(:parent_id, :name, :additional_text, :normal_price, :store_name, :product_group_id, :status, :brand_id, :packaging, :units_of_item, :size, :halal_status, :halal_certification_issuer, :preservatives_status, :artificial_coloring_status, :artificial_flavoring_status, :food_conditioner_status, :artifical_sweetener_status, :returnable, :product_note, :internal_note, :product_price_group, :creator, :picture)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_stock
+    @stock = Stock.find(params[:id])
   end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def stock_params
+    params.require(:stock).permit(:parent_id, :name, :additional_text, :normal_price, :store_name, :product_group_id, :status, :brand_id, :packaging, :units_of_item, :size, :halal_status, :halal_certification_issuer, :preservatives_status, :artificial_coloring_status, :artificial_flavoring_status, :food_conditioner_status, :artifical_sweetener_status, :returnable, :product_note, :internal_note, :product_price_group, :creator, :picture)
+  end
+end

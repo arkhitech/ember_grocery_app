@@ -9,3 +9,13 @@
 //= require ./router
 //= require_tree ./routes
 //= require_self
+
+//App.IndexRoute = Ember.Route.extend({
+//  redirect: function() {
+ //   this.transitionTo('posts');
+ // }
+  
+//});
+
+
+//this.get('store').commit();
