@@ -1,0 +1,65 @@
+  <h1>Listing stocks</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Parent</th>
+      <th>Name</th>
+      <th>Additional text</th>
+      <th>Normal price</th>
+      <th>Store name</th>
+      <th>Product group</th>
+      <th>Status</th>
+      <th>Brand</th>
+      <th>Packaging</th>
+      <th>Units of item</th>
+      <th>Size</th>
+      <th>Halal status</th>
+      <th>Halal certification issuer</th>
+      <th>Preservatives status</th>
+      <th>Artificial coloring status</th>
+      <th>Artificial flavoring status</th>
+      <th>Food conditioner status</th>
+      <th>Artifical sweetener status</th>
+      <th>Returnable</th>
+      <th>Product note</th>
+      <th>Internal note</th>
+      <th>Product price group</th>
+      <th>Creator</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ {{#each model}}
+    <tr>
+
+        <td> {{parent_id}} </td>
+        <td> {{name}} </td>
+        <td> {{additional_text}} </td>
+        <td> {{normal_price}} </td>
+        <td> {{store_name}} </td>
+        <td> {{product_group_id}} </td>
+        <td> {{status}} </td>
+        <td> {{brand_id}} </td>
+        <td> {{packaging}} </td>
+        <td> {{units_of_item}} </td>
+        <td> {{size}} </td>
+        <td> {{halal_status}} </td>
+        <td> {{halal_certification_issuer}} </td>
+        <td> {{preservatives_status}}</td>
+        <td> {{artificial_coloring_status}}</td>
+        <td> {{artificial_flavoring_status}} </td>
+        <td> {{food_conditioner_status}} </td>
+        <td> {{artifical_sweetener_status}}</td>
+        <td> {{returnable}} </td>
+        <td> {{product_note}} </td>
+        <td> {{internal_note}} </td>
+        <td> {{product_price_group}} </td>
+        <td> {{creator}} </td>
+        <td> {{picture}} </td> 
+    </tr>
+ {{/each}}
+  </tbody>
+</table>
+<br>

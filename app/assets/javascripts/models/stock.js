@@ -5,9 +5,28 @@
  */
 
 App.Stock = DS.Model.extend({
-  parent_id: DS.attr('integer'),
-  name: DS.attr('text'),
-  additional_text: DS.attr('text'),
-  normal_price: DS.attr('decimal'),
-  store_name: DS.attr('string')
+  parent_id: DS.attr('string'),
+  name: DS.attr('string'),
+  additional_text: DS.attr('string'),
+  normal_price: DS.attr('string'),
+  store_name: DS.attr('string'),
+  product_group_id: DS.attr('string'),
+  status: DS.attr('string'),
+  brand_id: DS.attr('string'),
+  packaging: DS.attr('string'),
+  units_of_item: DS.attr('string'),
+  size: DS.attr('string'),
+  halal_status: DS.attr('string'),
+  halal_certification_issuer: DS.attr('string'),
+  preservatives_status: DS.attr('string'),
+  artificial_coloring_status: DS.attr('string'),
+  artificial_flavoring_status: DS.attr('string'),
+  food_conditioner_status: DS.attr('string'),
+  artifical_sweetener_status: DS.attr('string'),
+  returnable: DS.attr('string'),
+  product_note: DS.attr('string'),
+  internal_note: DS.attr('string'),
+  product_price_group: DS.attr('string'),
+  creator: DS.attr('string'),
+  picture: DS.attr('string')
 });

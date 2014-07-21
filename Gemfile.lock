@@ -1,3 +1,17 @@
+GIT
+  remote: git://github.com/emberjs/ember-rails.git
+  revision: 46ce4ecf3a01d79bcc5c2ddecfe481a5230f0766
+  specs:
+    ember-rails (0.15.0)
+      active_model_serializers
+      barber (>= 0.4.1)
+      ember-data-source (>= 1.0.0.beta.5)
+      ember-source (>= 1.1.0)
+      execjs (>= 1.2)
+      handlebars-source (> 1.0.0)
+      jquery-rails (>= 1.0.17)
+      railties (>= 3.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -47,15 +61,6 @@ GEM
     coffee-script-source (1.7.1)
     ember-data-source (1.0.0.beta.8)
       ember-source
-    ember-rails (0.15.0)
-      active_model_serializers
-      barber (>= 0.4.1)
-      ember-data-source (>= 1.0.0.beta.5)
-      ember-source (>= 1.1.0)
-      execjs (>= 1.2)
-      handlebars-source (> 1.0.0)
-      jquery-rails (>= 1.0.17)
-      railties (>= 3.1)
     ember-source (1.6.1)
       handlebars-source (~> 1.0)
     emblem-rails (0.2.1)
@@ -148,7 +153,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
-  ember-rails
+  ember-rails!
   ember-source
   emblem-rails
   jquery-rails
