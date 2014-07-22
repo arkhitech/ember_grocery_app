@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :stocks do
      collection { 
-       post :import
+       post :import 
        get :search
      }
   end
