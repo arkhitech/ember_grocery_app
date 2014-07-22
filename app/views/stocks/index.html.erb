@@ -1,5 +1,5 @@
 <%= link_to 'New Stock', new_stock_path %>
-
+<%= link_to 'Search Stock', search_stocks_path %>
 
 <script type="text/x-handlebars">
 
@@ -8,8 +8,7 @@
 {{#linkTo 'about'}}About{{/linkTo}}
 {{#linkTo 'stocks'}}View stocks{{/linkTo}}
   
-      {{outlet}}
-  
+              {{outlet}}
 
 </script>
 
@@ -48,37 +47,37 @@
   </thead>
 
   <tbody>
-    <% @stocks.each do |stock| %>
-      <tr>
-        <td><%= stock.parent_id %></td>
-        <td><%= stock.name %></td>
-        <td><%= stock.additional_text %></td>
-        <td><%= stock.normal_price %></td>
-        <td><%= stock.store_name %></td>
-        <td><%= stock.product_group_id %></td>
-        <td><%= stock.status %></td>
-        <td><%= stock.brand_id %></td>
-        <td><%= stock.packaging %></td>
-        <td><%= stock.units_of_item %></td>
-        <td><%= stock.size %></td>
-        <td><%= stock.halal_status %></td>
-        <td><%= stock.halal_certification_issuer %></td>
-        <td><%= stock.preservatives_status %></td>
-        <td><%= stock.artificial_coloring_status %></td>
-        <td><%= stock.artificial_flavoring_status %></td>
-        <td><%= stock.food_conditioner_status %></td>
-        <td><%= stock.artifical_sweetener_status %></td>
-        <td><%= stock.returnable %></td>
-        <td><%= stock.product_note %></td>
-        <td><%= stock.internal_note %></td>
-        <td><%= stock.product_price_group %></td>
-        <td><%= stock.creator %></td>
-        <td><%= stock.picture %></td>
-        <td><%= link_to 'Show', stock %></td>
-        <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
-        <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+    <%# @stocks.each do |stock| %>
+      <%#*<tr>%>
+        <%#*<td><%= stock.parent_id %></td>%>
+        <%#*<td><%= stock.name %></td>%>
+        <%#*<td><%= stock.additional_text %></td>%>
+        <%#*<td><%= stock.normal_price %></td>%>
+        <%#*<td><%= stock.store_name %></td>%>
+        <%#*<td><%= stock.product_group_id %></td>%>
+        <%#*<td><%= stock.status %></td>%>
+        <%#*<td><%= stock.brand_id %></td>%>
+        <%#*<td><%= stock.packaging %></td>%>
+        <%#*<td><%= stock.units_of_item %></td>%>
+        <%#*<td><%= stock.size %></td>%>
+        <%#*<td><%= stock.halal_status %></td>%>
+        <%#*<td><%= stock.halal_certification_issuer %></td>%>
+        <%#*<td><%= stock.preservatives_status %></td>%>
+        <%#*<td><%= stock.artificial_coloring_status %></td>%>
+        <%#*<td><%= stock.artificial_flavoring_status %></td>%>
+        <%#*<td><%= stock.food_conditioner_status %></td>%>
+        <%#*<td><%= stock.artifical_sweetener_status %></td>%>
+        <%#*<td><%= stock.returnable %></td>%>
+        <%#*<td><%= stock.product_note %></td>%>
+        <%#*<td><%= stock.internal_note %></td>%>
+        <%#*<td><%= stock.product_price_group %></td>%>
+        <%#*<td><%= stock.creator %></td>%>
+        <%#*<td><%= stock.picture %></td>%>
+        <%#*<td><%= link_to 'Show', stock %></td>%>
+        <%#*<td><%= link_to 'Edit', edit_stock_path(stock) %></td>%>
+        <%#*<td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>%>
+      <%#*</tr>%>
+    <%# end %>
   </tbody>
 </table>
 

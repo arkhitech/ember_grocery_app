@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   post "homes/login_attempt"
   
   resources :stocks do
-     collection { post :import }
+     collection { 
+       post :import 
+       get :search
+     }
   end
 
   resources :promos
