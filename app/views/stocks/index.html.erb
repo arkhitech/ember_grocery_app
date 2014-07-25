@@ -1,19 +1,58 @@
-<%= link_to 'New Stock', new_stock_path %>
 
 
 <script type="text/x-handlebars">
 
-<h1> Welcome </h1>
-{{#linkTo 'posts'}}Posts{{/linkTo}}  
-{{#linkTo 'about'}}About{{/linkTo}}
-{{#linkTo 'stocks'}}View stocks{{/linkTo}}
-  
-      {{outlet}}
-  
+ <h3> &nbsp; Welcome to the Grocery website</h3>
 
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name">
+      <h1>{{#link-to 'index'}}Grocery Website{{/link-to}}</h1>
+    </li>
+
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="active"><%= link_to 'New Stock', new_stock_path %><li>
+      <li>{{#linkTo 'stocks'}}View stocks{{/linkTo}}</li>
+    </ul>
+  </section>
+</nav>
+
+      <!-- <div class="bd-reverse">
+          <button class="btn space-big soft" {{action "openModal"}}>Open Modal</button>
+        </div>
+      </div>  -->
+                                  
+                 {{outlet}} 
+
+                 
+       
+              
+              
+              
+
+      
+      
+
+  
+</script>
+
+<script type="text/x-handlebars" id="index">
+          <br><br>
+     <h3 class="headline"> Your groceries 
+     <br>
+     delivered. Tomorrow. </h3>
+     <p class="tagline"> Pick your groceries. </p>
+     {{#link-to 'stocks' class="button" id="custombutton"}} Search groceries now. {{/link-to}}
 </script>
 
 
+  
 <!--
   <h1>Listing stocks</h1>
 <table>
