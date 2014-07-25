@@ -1,0 +1,24 @@
+<div class="overlay" {{action "closeModal"}}></div>
+
+<div class="modal">
+      <h3> Product details: </h3>
+      Here you clicked: {{name}}
+      
+    <table>
+      <tr><th>Parent Id</th><td>{{parent_id}}</td><th>Halal status</th><td>{{halal_status}}</td><th>Picture</th><td>{{picture}}</td></tr>
+      <tr><th>Name</th><td>{{name}}</td><th>Halal certification issuer</th><td>{{halal_certification_issuer}}</td><th>Creator</th>{{creator}} <td></td></tr>
+      <tr><th>Additional text</th><td>{{additional_text}}</td><th>Preservatives status</th><td>{{preservatives_status}}</td><th>Product note</th><td>{{product_note}}</td></tr>
+      <tr><th>Normal price</th><td>{{normal_price}}</td><th>Artificial coloring status</th><td>{{artificial_coloring_status}}</td><th>Product price group</th><td>{{product_price_group}}</td></tr>
+      <tr><th>Store name</th>{{store_name}}<td></td><th>Artificial flavoring status</th><td>{{artificial_flavoring_status}}</td><th>Size</th><td>{{size}}</td></tr>
+      <tr><th>Product group</th><td>{{product_group_id}}</td><th>Food conditioner status</th><td>{{food_conditioner_status}}</td><th>Units of item</th><td>{{units_of_item}}</td></tr>
+      <tr><th>Status</th><td>{{status}} </td><th>Artifical sweetener status</th><td>{{artifical_sweetener_status}}</td><th>Internal note</th><td>{{internal_note}}</td></tr>
+      <tr><th>Brand</th><td>{{brand_id}}</td><th>Returnable</th><td>{{returnable}}</td><th>Packaging</th><td> {{packaging}} </td></tr>
+     
+      
+       
+ 
+    </table>
+
+    <button class="btn space-big soft" {{action "closeModal" }}>Close Dialog</button>
+      
+</div>

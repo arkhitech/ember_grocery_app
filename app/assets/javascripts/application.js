@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //=require; turbolinks;
 //= require jquery
 //= require handlebars
@@ -24,4 +25,5 @@
 // for more details see: http://emberjs.com/guides/application/
 App = Ember.Application.create();
 
+$(function(){ $(document).foundation(); });
 
