@@ -28,18 +28,7 @@
         </div>
       </div>  -->
                                   
-                 {{outlet}} 
-
-                 
-       
-              
-              
-              
-
-      
-      
-
-  
+      {{outlet}}   
 </script>
 
 <script type="text/x-handlebars" id="index">
@@ -52,74 +41,18 @@
 </script>
 
 
+<%#= link_to 'New Stock', new_stock_path %>
+
+<%#*<script type="text/x-handlebars">%>
+
+<%#*{{#linkTo 'stocks'}}View stocks{{/linkTo}}%>
   
-<!--
-  <h1>Listing stocks</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Parent</th>
-      <th>Name</th>
-      <th>Additional text</th>
-      <th>Normal price</th>
-      <th>Store name</th>
-      <th>Product group</th>
-      <th>Status</th>
-      <th>Brand</th>
-      <th>Packaging</th>
-      <th>Units of item</th>
-      <th>Size</th>
-      <th>Halal status</th>
-      <th>Halal certification issuer</th>
-      <th>Preservatives status</th>
-      <th>Artificial coloring status</th>
-      <th>Artificial flavoring status</th>
-      <th>Food conditioner status</th>
-      <th>Artifical sweetener status</th>
-      <th>Returnable</th>
-      <th>Product note</th>
-      <th>Internal note</th>
-      <th>Product price group</th>
-      <th>Creator</th>
-      <th>Picture</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <%#*{{outlet}}%>
 
-  <tbody>
-    <% @stocks.each do |stock| %>
-      <tr>
-        <td><%= stock.parent_id %></td>
-        <td><%= stock.name %></td>
-        <td><%= stock.additional_text %></td>
-        <td><%= stock.normal_price %></td>
-        <td><%= stock.store_name %></td>
-        <td><%= stock.product_group_id %></td>
-        <td><%= stock.status %></td>
-        <td><%= stock.brand_id %></td>
-        <td><%= stock.packaging %></td>
-        <td><%= stock.units_of_item %></td>
-        <td><%= stock.size %></td>
-        <td><%= stock.halal_status %></td>
-        <td><%= stock.halal_certification_issuer %></td>
-        <td><%= stock.preservatives_status %></td>
-        <td><%= stock.artificial_coloring_status %></td>
-        <td><%= stock.artificial_flavoring_status %></td>
-        <td><%= stock.food_conditioner_status %></td>
-        <td><%= stock.artifical_sweetener_status %></td>
-        <td><%= stock.returnable %></td>
-        <td><%= stock.product_note %></td>
-        <td><%= stock.internal_note %></td>
-        <td><%= stock.product_price_group %></td>
-        <td><%= stock.creator %></td>
-        <td><%= stock.picture %></td>
-        <td><%= link_to 'Show', stock %></td>
-        <td><%= link_to 'Edit', edit_stock_path(stock) %></td>
-        <td><%= link_to 'Destroy', stock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<%#*</script>%>
 
-<br>
--->
+<form id="live-search-form" method="get" action="<%= search_stocks_path %>">
+  <input id="big-search-box" name="search" placeholder="Search product" type="text"/>
+</form>
+
+<div id="live-search-results"></div>

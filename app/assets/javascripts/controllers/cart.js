@@ -6,13 +6,30 @@ App.CartController = Em.ObjectController.extend({
     content: {},
     sendForm: function(){
       
-      this.get('name');
-      this.get('email');
-      this.get('address');
-      this.get('phone');
-      this.get('date');
-      this.get('time');
+      var info = "Name: ";
+      info = info + this.get('name');
       
+      info = info + "\nEmail: ";
+      info = info + this.get('email');
+
+      info = info + "\nAddress: ";
+      info = info + this.get('address');
+      
+      info = info + "\nPhone: ";      
+      info = info + this.get('phone');
+
+      info = info + "\nDate: ";      
+      info = info + this.get('date');
+
+      info = info + "\nTime: ";
+      info = info + this.get('time');
+      
+      $.ajax({
+        type: "POST",
+        url: '/welcome_email',
+        data: {'info':info}
+      });
+            
       this.transitionTo('thanks');
     }
            

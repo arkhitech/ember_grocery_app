@@ -10,4 +10,5 @@ App.Router.map(function(){
   });
   this.resource('cart');
   this.route('thanks');
+  this.resource("welcome_email");
 });

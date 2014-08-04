@@ -3,7 +3,10 @@ Rails.application.routes.draw do
   post "homes/login_attempt"
   
   resources :stocks do
-     collection { post :import }
+     collection { 
+       post :import
+       get :search
+     }
   end
 
   resources :promos
@@ -15,6 +18,8 @@ Rails.application.routes.draw do
   resources :brands
 
   resources :admins
+  
+  post 'welcome_email' => 'welcome_email#create'
   
 #  root to: "stocks#new"
   root to: "homes#login"
