@@ -1,8 +1,14 @@
 
-
-{{outlet}}
-
 {{#link-to 'cart' class="small button" id="cart"}} Cart {{/link-to}}
+
+<div class="form">
+<br>
+<form {{action sendForm on="submit" }}>
+ <p> {{input value=search on="keyPress" placeholder="Search grocery" action='search_stocks'}} </p>
+ <p><input type="submit" value="Search" class="button"/> </p>
+</form>
+</div>
+
 <div class="table">
 <br><br>
 <h4>Listing stocks</h4>

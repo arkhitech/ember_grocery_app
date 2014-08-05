@@ -1,7 +1,7 @@
 
 
 App.StocksRoute = Ember.Route.extend({
- model: function() { return this.store.find('stock'); },
+ model: function() { return this.store.find('stock'); }
 
 });
 

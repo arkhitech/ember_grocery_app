@@ -1,1 +1,16 @@
- <%= @info %>!
+Items Ordered:
+
+<%for purchased_stock in @purchased_stocks%>
+  Item: <%=Stock.find(purchased_stock['stock_id']).name%>
+  Quantity: <%=purchased_stock['quantity']%>
+<%end%>
+
+User Details: 
+
+Name: <%=@name%>
+Email: <%=@email%>
+Address: <%=@address%>
+Phone: <%=@phone%>
+Date: <%=@date%>
+Time: <%=@time%>
+

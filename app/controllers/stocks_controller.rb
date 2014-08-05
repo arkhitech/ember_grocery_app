@@ -16,8 +16,11 @@ class StocksController < ApplicationController
   def search
     @stocks = []
     @stocks = ThinkingSphinx.search params[:search] if params[:search]        
-
-    render :layout => false
+    respond_to do |format| 
+      format.html {render :layout => false}
+      format.json {render json: @stocks.as_json}
+    end
+    
   end  
 
   # GET /stocks/1
