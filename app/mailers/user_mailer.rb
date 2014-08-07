@@ -3,7 +3,6 @@ class UserMailer < ActionMailer::Base
  
   def welcome_email(params)
     @purchased_stocks = params[:purchased_stocks].values
-    puts "Got purchased stocks: #{@purchased_stocks}"
     @name = params[:name]
     @email = params[:email]
     @address = params[:address]

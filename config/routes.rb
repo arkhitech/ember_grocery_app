@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'homes/login'
   post "homes/login_attempt"
-  
+
   resources :stocks do
      collection { 
        post :import
@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   resources :admins
   
   post 'welcome_email' => 'welcome_email#create'
+  post 'update_stock' => 'stocks#update_stock'
   
 #  root to: "stocks#new"
   root to: "homes#login"

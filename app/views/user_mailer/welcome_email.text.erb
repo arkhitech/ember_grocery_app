@@ -2,7 +2,10 @@ Items Ordered:
 
 <%for purchased_stock in @purchased_stocks%>
   Item: <%=Stock.find(purchased_stock['stock_id']).name%>
+  Store: <%=Stock.find(purchased_stock['stock_id']).store_name%>    
   Quantity: <%=purchased_stock['quantity']%>
+  Price: <%=Stock.find(purchased_stock['stock_id']).normal_price%>
+  
 <%end%>
 
 User Details: 

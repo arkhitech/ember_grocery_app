@@ -25,8 +25,8 @@
         <td> {{normal_price}}</td>
         <td><table>
             <tr><th> {{units_of_item}} </th></tr>
-            <tr><td><button class="tiny button" {{action "AddToCart" this.id}}>+</button></td>
-                <td><button class="tiny button" {{action "RemoveFromCart" this.id}}>-</button></td></tr>
+            <tr><td><button class="tiny button" {{action "addToCart" this}}>+</button></td>
+                <td><button class="tiny button" {{action "removeFromCart" this}}>-</button></td></tr>
         </table></td>
     </tr>
   {{/if}}

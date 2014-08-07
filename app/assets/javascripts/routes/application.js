@@ -18,16 +18,16 @@ App.ApplicationRoute = Em.Route.extend({
   //    })},
   
   actions: {
-    AddToCart: function(id){
-      var record = this.store.getById('stock', id);
+    addToCart: function(record){
+      //var record = this.store.getById('stock', id);
       //record.set("units_of_item", "1");
-      record.incrementProperty("units_of_item");
+      record.incrementProperty("units_of_item");      
     },
-    RemoveFromCart: function(id){
-      var record = this.store.getById('stock', id);
+    removeFromCart: function(record){
+      //var record = this.store.getById('stock', id);
       if(record.get("units_of_item") > 0){
          record.decrementProperty("units_of_item");
-          }
+      }
     }
   }
 

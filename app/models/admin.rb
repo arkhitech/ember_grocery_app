@@ -8,7 +8,7 @@ class Admin < ActiveRecord::Base
     user = Admin.find_by_email_and_password(email, password)
 
     if user
-      return user    
+      return user  
   
     else
       return false

@@ -15,4 +15,3 @@ App.StockRoute = Ember.Route.extend({
   }
   }
 });
-

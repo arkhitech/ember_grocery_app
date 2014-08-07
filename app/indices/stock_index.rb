@@ -5,4 +5,6 @@
 ThinkingSphinx::Index.define :Stock, :with => :active_record do
   indexes name
   indexes store_name, :sortable => true
+  
+  set_property :min_infix_len => 3
 end

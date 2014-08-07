@@ -90,6 +90,11 @@ class StocksController < ApplicationController
     end
   end
 
+  def update_stock
+    update_record = Stock.update_edit(params)
+  
+  end  
+  
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_stock
