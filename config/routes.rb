@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'homes/login'
   post "homes/login_attempt"
+  get 'stocks/admin'
 
   resources :stocks do
      collection { 

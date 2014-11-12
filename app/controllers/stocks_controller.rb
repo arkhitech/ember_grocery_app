@@ -91,8 +91,15 @@ class StocksController < ApplicationController
   end
 
   def update_stock
-    update_record = Stock.update_edit(params)
+    update_record = Stock.update_edit(params)  
+  end
   
+  def admin
+    @stocks = Stock.all
+    respond_to do |format|
+      format.html {@stocks}
+      format.json {render json: @stocks.as_json}
+    end
   end  
   
   private

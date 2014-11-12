@@ -135,7 +135,7 @@ class Stock < ActiveRecord::Base
       stock.product_note = params['product_note'];
       stock.artificial_coloring_status = params['artificial_coloring_status'];
       stock.size = params['size'];
-      stock.product_group_id = params['product_group'];
+      stock.product_group_id = params['product_group_id'];
       stock.food_conditioner_status = params['food_conditioner_status'];
       stock.units_of_item = params['units_of_item'];
       stock.status = params['status'];

@@ -21,7 +21,7 @@ actions: {
       var product_price_group = stock.get('product_price_group');
       var artificial_flavoring_status = stock.get('artificial_flavoring_status');
       var size = stock.get('size');
-      var product_group = stock.get('product_group');
+      var product_group_id = stock.get('product_group_id');
       var food_conditioner_status = stock.get('food_conditioner_status');
       var units_of_item = stock.get('units_of_item');
       var status = stock.get('status');
@@ -48,7 +48,7 @@ actions: {
           product_note: product_note,
           artificial_coloring_status: artificial_coloring_status,
           size: size,
-          product_group: product_group,
+          product_group_id: product_group_id,
           food_conditioner_status: food_conditioner_status,
           units_of_item: units_of_item,
           status: status,

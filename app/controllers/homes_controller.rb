@@ -5,8 +5,7 @@ class HomesController < ApplicationController
  def login_attempt
    authorized_user = Admin.authenticate(params[:admin_login][:email],params[:admin_login][:password])
     if authorized_user
-      flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
-      redirect_to :controller => 'stocks', :action => 'index'
+     redirect_to :controller => 'stocks', :action => 'admin'
 
    else
       flash[:notice] = "Invalid Username or Password" 

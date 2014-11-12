@@ -1,0 +1,32 @@
+<div class="form">
+<br>
+ <p> {{input value=search placeholder="Search grocery to edit"}} </p>
+</div>
+
+<div class="table">
+<br><br>
+<h4>Listing stocks</h4>
+<table>
+  <thead>
+    <tr>
+      <th>Store name</th>
+      <th>Product Name</th>
+      <th>Additional</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ {{#each model}}
+    <tr>
+        <td>{{store_name}} </td>
+        <td>{{#link-to 'stock_edit' this}} {{name}} {{/link-to}}</td>
+        <td> {{additional_text}} </td>
+        <td> {{normal_price}} </td>
+    </tr>
+ {{/each}}
+  </tbody>
+</table>
+</div>
+
+<br>

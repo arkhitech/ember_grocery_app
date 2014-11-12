@@ -1,0 +1,18 @@
+
+
+<script type="text/x-handlebars">
+
+ <h3> &nbsp; Welcome to the Grocery website</h3>
+
+<nav class="top-bar" data-topbar>
+  <section class="top-bar-section">
+
+    <!-- Left Nav Section -->
+    <ul class="left">
+      <li class="active"><%= link_to 'New Stock', new_stock_path %><li>
+      <li>{{#linkTo 'admin'}}Edit stocks{{/linkTo}}</li>
+    </ul>
+  </section>
+</nav>
+{{outlet}}
+</script>
