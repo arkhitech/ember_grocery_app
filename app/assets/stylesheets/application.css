@@ -12,4 +12,89 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+
+.modal {
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  margin: 10px auto;
+  background-color: #CAE6CF;
+  padding: 1em;
+}
+
+a:hover {
+    text-decoration: underline;
+    background-color: #008cba;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+h3 {
+  color: #339add;
+}
+
+.table{
+  width: 80%;
+  margin-left: 10%;
+}
+
+#cart {
+  position: fixed;
+  right: 3%;
+  top: 20%;
+  background-color: #079921;
+  color: white;
+}
+
+#cart:hover , #custombutton:hover {
+  background-color: #066116;
+}
+
+#custombutton {
+  color: white;
+  background-color: #dca604;
+  left: 42%;
+}
+
+.form {
+  width: 50%;
+  margin-left: 10%;
+  
+}
+
+.ending {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  color: #066116;
+  font-weight: bold;
+}
+
+.headline {
+  font-size: 4.236em;
+  line-height: 1em;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #3e3f3a;
+  margin: 0 0 18px;
+  text-align: center;
+}
+.tagline {
+  font-size: 1.364em;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.5em;
+  font-weight: 300;
+  color: #7b7c78;
+  margin: 0 0 18px;
+  text-align: center;
+}

@@ -117,4 +117,38 @@ class Stock < ActiveRecord::Base
     end
     stocks  
   end
+  
+  def self.update_edit(params)
+        
+    stock = Stock.find_by_id(params['id'])
+
+    if stock
+      stock.store_name = params['store_name'];
+      stock.normal_price = params['normal_price'];
+      stock.parent_id = params['parent_id'];
+      stock.halal_status = params['halal_status'];
+      stock.picture = params['picture'];
+      stock.halal_certification_issuer = params['halal_certification_issuer'];
+      stock.creator = params['creator'];
+      stock.additional_text = params['additional_text'];
+      stock.preservatives_status = params['preservatives_status'];
+      stock.product_note = params['product_note'];
+      stock.artificial_coloring_status = params['artificial_coloring_status'];
+      stock.size = params['size'];
+      stock.product_group_id = params['product_group'];
+      stock.food_conditioner_status = params['food_conditioner_status'];
+      stock.units_of_item = params['units_of_item'];
+      stock.status = params['status'];
+      stock.artifical_sweetener_status = params['artifical_sweetener_status'];
+      stock.internal_note = params['internal_note'];
+      stock.brand = params['brand'];
+      stock.returnable = params['returnable'];
+      stock.packaging = params['packaging'];
+      stock.product_price_group = params['product_price_group'];
+      stock.artificial_flavoring_status = params['artificial_flavoring_status'];
+      
+      stock.save!
+
+    end
+  end
 end

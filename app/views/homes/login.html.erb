@@ -5,8 +5,8 @@
 <%= form_for :admin_login, url: homes_login_attempt_path do |f| %>
 
 <p style="text-align: center">
-<%= f.label :username %> <br>
-<%= f.text_field :username %>
+<%= f.label :email%> <br>
+<%= f.email_field :email %>
 </p>
 
 <p style="text-align: center">
@@ -15,12 +15,12 @@
 </p>
 
 <p style="text-align: center">
-  <%= f.submit "Sign in" %>
+  <%= f.submit "Sign in", class: "button" %>
 </p>
 
 <% end %>
 
 <div style="text-align: center">
 <%= link_to 'Sign up', "admins/new" %>
-<%= link_to 'User', "" %>
+<%= link_to 'User', "stocks" %>
 </div>

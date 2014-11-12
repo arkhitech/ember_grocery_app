@@ -5,8 +5,12 @@
 //});
 
 App.Router.map(function(){
-  this.resource('posts');
-  this.resource('about');
-  this.resource('stock', { path: '/stock/:stock_id' })
-  this.resource('stocks')
+  this.resource('stocks', function(){
+     this.resource('stock', { path: ':name' });
+     this.resource('stock_edit', { path: ':name' });
+  });
+  this.resource('cart');
+  this.route('thanks');
+  this.resource("welcome_email");
+ // this.resource("update_stock");
 });

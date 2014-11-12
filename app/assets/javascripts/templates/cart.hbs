@@ -1,0 +1,54 @@
+<div class="table">
+<br><br>
+<h4> Your Shopping Cart </h4>
+<table>
+  <thead>
+    <tr>
+      <th>Store name</th>
+      <th>Product Name</th>
+      <th>Additional</th>
+      <th>Group</th>
+      <th>Total Price</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+ {{#each model}}
+  {{#if this.units_of_item}}
+    <tr>
+        <td>{{store_name}} </td>
+        <!-- <td>{{#link-to 'stock' this}} {{name}} {{/link-to}}</td> -->
+        <td> {{name}}</td> 
+        <td> {{additional_text}} </td>
+        <td> {{product_group_id}} </td>
+        <td> {{normal_price}}</td>
+        <td><table>
+            <tr><th> {{units_of_item}} </th></tr>
+            <tr><td><button class="tiny button" {{action "addToCart" this}}>+</button></td>
+                <td><button class="tiny button" {{action "removeFromCart" this}}>-</button></td></tr>
+        </table></td>
+    </tr>
+  {{/if}}
+ {{/each}}
+  </tbody>
+</table>
+</div>
+<br>
+{{#link-to 'stocks' class="button" id="custombutton"}} Continue Shopping {{/link-to}}
+<br>
+<br><br><br>
+
+<div class="form">
+<h3>  Place your Order: </h3>
+<form {{action sendForm on="submit"}}>
+ <p> Name {{input value=name }} </p>
+ <p> Email {{input value=email}} </p>
+ <p> Address {{input value=address}} </p>
+ <p> Phone no. {{input value=phone}} </p>
+ <p> Date {{input value=date}} </p>
+ <p> Time {{input value=time}} </p>
+ <p><input type="submit" value="Checkout" class="button" /> </p>
+</form>
+</div>
+

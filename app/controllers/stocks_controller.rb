@@ -12,6 +12,16 @@ class StocksController < ApplicationController
       format.json {render json: @stocks.as_json}
     end
   end
+  
+  def search
+    @stocks = []
+    @stocks = ThinkingSphinx.search params[:search] if params[:search]        
+    respond_to do |format| 
+      format.html {render :layout => false}
+      format.json {render json: @stocks.as_json}
+    end
+    
+  end  
 
   def search
     @stocks = []
@@ -86,11 +96,16 @@ class StocksController < ApplicationController
       end
     end
 
-    private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_stock
-      @stock = Stock.find(params[:id])
-    end
+  def update_stock
+    update_record = Stock.update_edit(params)
+  
+  end  
+  
+  private
+  # Use callbacks to share common setup or constraints between actions.
+  def set_stock
+    @stock = Stock.find(params[:id])
+  end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def stock_params
