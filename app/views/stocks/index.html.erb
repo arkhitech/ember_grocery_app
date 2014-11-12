@@ -49,5 +49,17 @@
   </tbody>
 </table>
 
-<br>
--->
+<script type="text/x-handlebars" id="index">
+          <br><br>
+     <h3 class="headline"> Your groceries 
+     <br>
+     delivered. Tomorrow. </h3>
+     <p class="tagline"> Pick your groceries. </p>
+     {{#link-to 'stocks' class="button" id="custombutton"}} Search groceries now. {{/link-to}}
+</script>
+
+<%#*<form id="live-search-form" method="get" action="<%= search_stocks_path %>">%>
+  <%#*<input id="big-search-box" name="search" placeholder="Search product" type="text"/>%>
+<%#*</form>%>
+
+<%#*<div id="live-search-results"></div>%>
